@@ -1,9 +1,51 @@
 ﻿using System;
+using System.ComponentModel.Design;
+using System.Net.Quic;
 
 namespace Calculator
 {
     class Program
     {
+        static void multiply(Double a, Double b)
+        {
+            Console.WriteLine("Your Output is " + a + "*" + b + "=" + (a * b));
+        }
+
+        static void divide(Double a, Double b)
+        {
+            if ( b > 0)
+                Console.WriteLine("Your Output is " + a + "/" + b + "=" + (a / b));
+            else 
+                Console.WriteLine("cant't divide by 0");
+        }
+
+        static void add(Double a, Double b)
+        {
+            Console.WriteLine("Your Output is " + a + "+" + b + "=" + (a + b));
+        }
+
+        static void subtract(Double a, Double b)
+        {
+            Console.WriteLine("Your Output is " + a + "-" + b + "=" + (a - b));
+        }
+
+        static void exp(Double a, Double b)
+        {
+            Console.WriteLine("Your Output is " + a + "^" + b + "=" + Math.Pow(a,b));
+        }
+
+        static void check(char input)
+        {
+            if (input == 'X' || input == 'x')
+                quit();
+        }
+
+        static void quit()
+        {
+            Console.Clear();
+            Console.WriteLine("Thank you for using the calculator");
+            Environment.Exit(0);
+        }
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the calculator");
@@ -12,9 +54,9 @@ namespace Calculator
             {
                 Console.WriteLine("this is operation number = " + counter++);
                 Console.WriteLine("Please enter a number");
-                int x = Convert.ToInt32(Console.ReadLine());
+                Double x = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Please enter a number");
-                int y = Convert.ToInt32(Console.ReadLine());
+                Double y = Convert.ToInt32(Console.ReadLine());
                 ;
                 Console.WriteLine(
                     "Enter Your Operation ( Addition(+) , Subtraction(-) , Multiplication(*) , Division(/) , Exponentiation(^) ");
@@ -22,32 +64,27 @@ namespace Calculator
                 switch (operation)
                 {
                     case "+":
-                        Console.WriteLine("Your Output is " + x + "+" + y + "=" + (x + y));
+                        add(x, y);
                         break;
                     case "-":
-                        Console.WriteLine("Your Output is " + x + "-" + y + "=" + (x - y));
+                        subtract(x, y);
                         break;
                     case "*":
-                        Console.WriteLine("Your Output is " + x + "*" + y + "=" + (x * y));
+                        multiply(x, y);
                         break;
                     case "/":
-                        Console.WriteLine("Your Output is " + x + "/" + y + "=" + (x / y));
+                        divide(x, y);
                         break;
                     case "^":
-                        Console.WriteLine("Your Output is " + x + "^" + y + "=" + Math.Pow(x,y));
+                        exp(x, y);
                         break;
                     default:
                         Console.WriteLine("Invalid Operation");
                         break;
                 }
                 Console.WriteLine("Enter any key to continue or X to quit");
-                char check = Convert.ToChar(Console.ReadLine());
-                if (check == 'X' || check == 'x')
-                {
-                    Console.Clear();
-                    Console.WriteLine("Thank you for using the calculator");
-                    return;
-                }
+                char final = Convert.ToChar(Console.ReadLine());
+                check(final);
                 Console.Clear();
             }
         }
