@@ -6,30 +6,30 @@ namespace Calculator
 {
     class Program
     {
-        static void multiply(Double a, Double b)
+        static void Multiply(Double a, Double b)
         {
             Console.WriteLine("Your Output is " + a + "*" + b + "=" + (a * b));
         }
 
-        static void divide(Double a, Double b)
+        static void Divide(Double a, Double b)
         {
             if ( b > 0)
                 Console.WriteLine("Your Output is " + a + "/" + b + "=" + (a / b));
             else 
-                Console.WriteLine("cant't divide by 0");
+                Console.WriteLine("can't divide by 0");
         }
 
-        static void add(Double a, Double b)
+        static void Add(Double a, Double b)
         {
             Console.WriteLine("Your Output is " + a + "+" + b + "=" + (a + b));
         }
 
-        static void subtract(Double a, Double b)
+        static void Subtract(Double a, Double b)
         {
             Console.WriteLine("Your Output is " + a + "-" + b + "=" + (a - b));
         }
 
-        static void exp(Double a, Double b)
+        static void Exponentiate(Double a, Double b)
         {
             Console.WriteLine("Your Output is " + a + "^" + b + "=" + Math.Pow(a,b));
         }
@@ -64,19 +64,19 @@ namespace Calculator
                 switch (operation)
                 {
                     case "+":
-                        add(x, y);
+                        Add(x, y);
                         break;
                     case "-":
-                        subtract(x, y);
+                        Subtract(x, y);
                         break;
                     case "*":
-                        multiply(x, y);
+                        Multiply(x, y);
                         break;
                     case "/":
-                        divide(x, y);
+                        Divide(x, y);
                         break;
                     case "^":
-                        exp(x, y);
+                        Exponentiate(x, y);
                         break;
                     default:
                         Console.WriteLine("Invalid Operation");
