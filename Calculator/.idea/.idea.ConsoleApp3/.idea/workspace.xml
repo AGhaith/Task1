@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4d1f7b70-7741-48c6-979a-2bc226f8e7fb" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../task.py" beforeDir="false" />
-    </list>
+    <list default="true" id="4d1f7b70-7741-48c6-979a-2bc226f8e7fb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +18,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Program.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
@@ -74,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740061913942</updated>
       <workItem from="1740061915095" duration="1677000" />
+      <workItem from="1740063718145" duration="185000" />
     </task>
     <servers />
   </component>
