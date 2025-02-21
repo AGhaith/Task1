@@ -13,9 +13,9 @@ namespace Calculator
 
         static void Divide(Double a, Double b)
         {
-            if ( b > 0)
+            if (b > 0)
                 Console.WriteLine("Your Output is " + a + "/" + b + "=" + (a / b));
-            else 
+            else
                 Console.WriteLine("can't divide by 0");
         }
 
@@ -31,7 +31,7 @@ namespace Calculator
 
         static void Exponentiate(Double a, Double b)
         {
-            Console.WriteLine("Your Output is " + a + "^" + b + "=" + Math.Pow(a,b));
+            Console.WriteLine("Your Output is " + a + "^" + b + "=" + Math.Pow(a, b));
         }
 
         static void check(char input)
@@ -56,8 +56,8 @@ namespace Calculator
                 Console.WriteLine("Please enter a number");
                 Double x = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Please enter a number");
-                Double y = Convert.ToInt32(Console.ReadLine());
-                ;
+                Double y = Convert.ToDouble(Console.ReadLine());
+
                 Console.WriteLine(
                     "Enter Your Operation ( Addition(+) , Subtraction(-) , Multiplication(*) , Division(/) , Exponentiation(^) ");
                 String operation = Console.ReadLine();
